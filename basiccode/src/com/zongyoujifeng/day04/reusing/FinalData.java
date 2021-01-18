@@ -2,6 +2,8 @@ package com.zongyoujifeng.day04.reusing;
 
 import java.util.Random;
 
+import static net.mindview.util.Print.print;
+
 /**
  * @author 10451
  * @version 1.0
@@ -45,14 +47,27 @@ public class FinalData {
     public String toString() {
         return "FinalData{" +
                 "id='" + id + '\'' +
-                ", i4=" + i4 + ",INT_5" + INT_5 +
+                ", i4=" + i4 + ",INT_5=" + INT_5 +
                 '}';
     }
 
     public static void main(String[] args) {
         FinalData fd1 = new FinalData("fd1");
         //fd1.valueOne++;//Error:can't change value
-        fd1.v2.i++;
+        fd1.v2.i++;//Object isn't constant
+        //OK ---not final
+        fd1.v1 = new Value(9);
+        for (int i = 0; i < fd1.a.length; i++) {
+            fd1.a[i]++;
+            // fd1.v2 = new Value(0);
+            //fd1.VAL_3 = new Value(1);//change reference
+            // fd1.a = new int[3];
+            print(fd1);
+            print("Creating new FinalData");
+            FinalData fd2 = new FinalData("fd2");
+            print(fd1);
+            print(fd2);
+        }
 
     }
 }
