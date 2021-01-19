@@ -1,4 +1,4 @@
-package com.zongyoujifeng.day05.interfaces.music;
+package com.zongyoujifeng.day05.interfaces.music5;
 
 import com.zongyoujifeng.day05.polymorphism.music3.Note;
 
@@ -7,17 +7,18 @@ import static net.mindview.util.Print.print;
 /**
  * @author 10451
  * @version 1.0
- * @ClassName Music4
- * @description
- * @date 2021/1/19 11:31
+ * @ClassName Music5
+ * @description 接口
+ * @date 2021/1/19 12:33
  */
-public class Music4 {
+public class Music5 {
     static void tune(Instrument i) {
         i.play(Note.MIDDLE_C);
     }
 
     static void tuneAll(Instrument[] e) {
-        for (Instrument i : e) {
+        for (Instrument i : e
+        ) {
             tune(i);
         }
     }
@@ -34,79 +35,69 @@ public class Music4 {
     }
 }
 
-class Wind extends Instrument {
+class Wind implements Instrument {
+    @Override
+    public void play(Note n) {
+        print(this + ".play()" + n);
+    }
 
     @Override
-    public String what() {
+    public void adjust() {
+        print(this + ".adjust()");
+    }
+
+    @Override
+    public String toString() {
         return "Wind";
     }
+}
 
+class Percussion implements Instrument {
     @Override
     public void play(Note n) {
-        print("Wind.play() " + n);
+        print(this + ".play()" + n);
     }
 
     @Override
     public void adjust() {
-
+        print(this + ".adjust()");
     }
-}
 
-class Percussion extends Instrument {
     @Override
-    public String what() {
+    public String toString() {
         return "Percussion";
     }
-
-    @Override
-    public void play(Note n) {
-        print("Percussion.play() " + n);
-    }
-
-    @Override
-    public void adjust() {
-
-    }
 }
 
-class Stringed extends Instrument {
+class Stringed implements Instrument {
     @Override
     public void play(Note n) {
-        print("Stringed.play() " + n);
-    }
-
-    @Override
-    public String what() {
-        return "Stringed";
+        print(this + ".play()" + n);
     }
 
     @Override
     public void adjust() {
-
+        print(this + ".adjust()");
     }
 
+    @Override
+    public String toString() {
+        return "Stringed";
+    }
 }
 
 class Brass extends Wind {
     @Override
-    public void play(Note n) {
-        print("Brass.play() " + n);
-    }
-
-    @Override
-    public void adjust() {
-
+    public String toString() {
+        return "Brass";
     }
 }
 
 class Woodwind extends Wind {
     @Override
-    public String what() {
+    public String toString() {
         return "Woodwind";
     }
-
-    @Override
-    public void play(Note n) {
-        print("Woodwind.play() " + n);
-    }
 }
+
+

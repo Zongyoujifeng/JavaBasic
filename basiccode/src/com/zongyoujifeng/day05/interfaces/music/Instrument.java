@@ -22,7 +22,7 @@ abstract class Instrument {
     }
 
     /**
-     *
+     * 调整
      */
     public abstract void adjust();
 
