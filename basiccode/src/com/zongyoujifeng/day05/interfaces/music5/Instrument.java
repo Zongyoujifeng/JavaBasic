@@ -17,7 +17,14 @@ public interface Instrument {
 
     //cannot have method definitions:
 
+    /**
+     * 演奏
+     * @param n 枚举
+     */
     void play(Note n);
 
+    /**
+     * 调整
+     */
     void adjust();
 }
