@@ -286,5 +286,18 @@ super 关键字用来访问父类内容，而this关键字用来访问本类内�
 当继承某个外围类的时候，内部类没有什么神奇的变化。这两个内部类是独立的实体，各自在自己的命名空间内。
 
 
+由于每个类都会产生一个.class文件，其中包含如何创建该类型的对象的全部信息（以此信息产生一个“meta-class”，叫做Class对象），内部类也必须生成一个.class文件以包含它们的Class
+对象信息。这些类文件的命名有严格的规则：外围类的名字，加上“$”,再加上内部类的名字。比如，LocalInnerClass.java文件包括：
+    
+    Counter.class
+    LocalInnerClass$1.class
+    LocalInnerClass$1LocalCounter.class
+    LocalInnerClass.class
+    
+    
+    
+
+
+
 ​         
 ​         
