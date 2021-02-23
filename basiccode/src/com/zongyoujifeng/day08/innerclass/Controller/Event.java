@@ -9,15 +9,15 @@ package com.zongyoujifeng.day08.innerclass.Controller;
  */
 public abstract class Event {
     private long eventTime;
-    protected final long dayTime;
+    protected final long delayTime;
 
-    public Event(long dayTime) {
-        this.dayTime = dayTime;
+    public Event(long delayTime) {
+        this.delayTime = delayTime;
         start();
     }
 
     public void start() {
-        eventTime = System.nanoTime() + dayTime;
+        eventTime = System.nanoTime() + delayTime;
     }
 
     /**
