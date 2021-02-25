@@ -294,6 +294,10 @@ super 关键字用来访问父类内容，而this关键字用来访问本类内�
     LocalInnerClass$1LocalCounter.class
     LocalInnerClass.class
     
+Java容器类库的用途就是保存对象：
+1. Collection:一个独立元素的序列。下面有List、Set、Queue
+2. Map:
+    
     
     
 
