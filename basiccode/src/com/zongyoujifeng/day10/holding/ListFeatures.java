@@ -3,10 +3,7 @@ package com.zongyoujifeng.day10.holding;
 
 import typeinfo.pets.*;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static net.mindview.util.Print.print;
 
@@ -49,5 +46,37 @@ public class ListFeatures {
         Collections.sort(sub);
         print("sorted subList: " + sub);
 
+        print("11:" + pets.containsAll(sub));
+        Collections.shuffle(sub, rand);
+        print("shuffled subList: " + sub);
+        print("12:" + pets.containsAll(sub));
+
+        List<Pet> copy = new ArrayList<>(pets);
+        sub = Arrays.asList(pets.get(1), pets.get(4));
+
+        print(sub);
+        copy.retainAll(sub);
+        print("13: " + copy);
+        copy = new ArrayList<>(pets);
+        copy.remove(2);
+        print("14: " + copy);
+        copy.removeAll(sub);
+        print("15:" + copy);
+        copy.set(1, new Mouse());
+
+        print("16:" + copy);
+        copy.addAll(2, sub);
+        print("17:" + copy);
+
+        print("18:" + pets.isEmpty());
+        pets.clear();
+        print("19:" + pets);
+        print("20：" + pets.isEmpty());
+        pets.addAll(Pets.arrayList(4));
+        print("21:" + pets);
+        Object[] o = pets.toArray();
+        print("22:" + o[3]);
+        Pet[] pa = pets.toArray(new Pet[0]);
+        print("23:" + pa[3].id());
     }
 }
