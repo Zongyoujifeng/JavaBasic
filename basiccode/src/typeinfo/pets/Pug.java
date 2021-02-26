@@ -2,7 +2,7 @@
 package typeinfo.pets;
 
 /**
- * 哈巴狗
+ * @description 哈巴狗
  *
  * @author Bruce Eckel
  */
