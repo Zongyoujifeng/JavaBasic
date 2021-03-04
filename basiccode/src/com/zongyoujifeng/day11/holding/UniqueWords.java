@@ -16,10 +16,16 @@ import java.util.TreeSet;
 public class UniqueWords {
     public static void main(String[] args) {
         // Set<String> words = new TreeSet<>(new TextFile("E:\\IdeaProjectsNew\\JavaBasic\\basiccode\\src\\com" + "\\zongyoujifeng\\day11\\holding\\SetOperation.java", "\\W+"));
+
         Set<String> words = new TreeSet<>(new TextFile(("basiccode\\src\\com\\zongyoujifeng\\day11\\holding" +
                 "\\SetOperation.java"), "\\W+"));
-        System.out.println(new File("basiccode\\src\\com\\zongyoujifeng\\day11\\holding\\SetOperation.java").getAbsolutePath());
 
+
+        // Set<String> words = new TreeSet<>(new TextFile(("./\\SetOperation.java"), "\\W+"));
+
+        System.out.println(new File("basiccode\\src\\com\\zongyoujifeng\\day11\\holding\\SetOperation.java").getAbsolutePath());
+        System.out.println(new File("../").getAbsolutePath());
+        System.out.println(new File("/").getAbsolutePath());
         System.out.println(words);
 
     }
