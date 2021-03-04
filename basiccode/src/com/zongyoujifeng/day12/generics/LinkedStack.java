@@ -27,10 +27,10 @@ public class LinkedStack<T> {
         }
     }
 
-    private Node<T> top = new Node<T>();
+    private Node<T> top = new Node<>();
 
     public void push(T item) {
-        top = new Node<T>(item, top);
+        top = new Node<>(item, top);
     }
 
     public T pop() {
