@@ -6,7 +6,8 @@ import net.mindview.util.Generator;
  * @author 10451
  * @version 1.0
  * @ClassName BasicGenerator
- * @description 通用地Generator
+ * @description 通用的generator提供一个基本实现，
+ * 用以生成某个类的对象
  * @date 2021/3/5 20:22
  */
 public class BasicGenerator<T> implements Generator<T> {
