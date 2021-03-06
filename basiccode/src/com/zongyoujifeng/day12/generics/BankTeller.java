@@ -2,9 +2,7 @@ package com.zongyoujifeng.day12.generics;
 
 import net.mindview.util.Generator;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author 10451
@@ -22,6 +20,12 @@ public class BankTeller {
         Random rand = new Random(47);
 
         Queue<Customer> line = new LinkedList<>();
+        Generators.fill(line, Customer.generator(), 4);
+        List<Teller> tellers = new ArrayList<>();
+        Generators.fill(tellers, Teller.generator, 4);
+        for (Customer c: line) {
+            serve(tellers.get(rand.nextInt(tellers.size())), c);
+        }
 
     }
 }
@@ -61,6 +65,11 @@ class Teller {
     private static long id = counter++;
 
     private Teller() {
+    }
+
+    @Override
+    public String toString() {
+        return "Teller " + id;
     }
 
     /**
