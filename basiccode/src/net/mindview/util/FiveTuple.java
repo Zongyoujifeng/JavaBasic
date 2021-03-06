@@ -2,6 +2,7 @@
 package net.mindview.util;
 
 /**
+ * @author Bruce Eckel
  * @description 五元组
  * @param <A>
  * @param <B>

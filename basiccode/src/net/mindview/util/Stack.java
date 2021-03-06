@@ -5,7 +5,7 @@ package net.mindview.util;
 import java.util.LinkedList;
 
 /**
- * 栈
+ * @description 栈
  * @author Bruce Eckel
  * @param <T>
  */
