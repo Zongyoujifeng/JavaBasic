@@ -29,7 +29,7 @@ class TimeStampedImp implements Timestamped {
     private final String timeStamp;
 
     public TimeStampedImp() {
-        // // timeStamp = new Date().getTime();
+        // timeStamp = new Date().getTime();
         // Date date = new Date();
         // SimpleDateFormat sbf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // //获取当前时间戳到毫秒
@@ -62,9 +62,9 @@ class SerialNumberedImp implements SerialNumbered {
 }
 
 interface Basic {
-    public void set(String val);
+    void set(String val);
 
-    public String get();
+    String get();
 }
 
 class BasicImp implements Basic {
@@ -82,8 +82,8 @@ class BasicImp implements Basic {
 }
 
 class Mixin extends BasicImp implements Timestamped, SerialNumbered {
-    private Timestamped timestamped = new TimeStampedImp();
-    private SerialNumbered serialNumbered = new SerialNumberedImp();
+    private final Timestamped timestamped = new TimeStampedImp();
+    private final SerialNumbered serialNumbered = new SerialNumberedImp();
 
     @Override
     public String getStamp() {
