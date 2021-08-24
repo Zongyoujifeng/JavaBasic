@@ -22,6 +22,10 @@ public class Overloading {
 
 class Tree {
     int height;
+
+    /**
+     * 默认构造器
+     */
     Tree() {
         print("Planting a seedling");
         height = 0;
