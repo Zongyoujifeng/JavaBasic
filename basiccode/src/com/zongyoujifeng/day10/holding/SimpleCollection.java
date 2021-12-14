@@ -12,12 +12,13 @@ import java.util.Collection;
  */
 public class SimpleCollection {
     public static void main(String[] args) {
+
         Collection<Integer> c = new ArrayList<>();
+        // 使用Integer对象填充Collection
         for (int i = 0; i < 10; i++) {
             c.add(i);
         }
-        for (Integer item :
-                c) {
+        for (Integer item : c) {
             System.out.print(item + ", ");
         }
     }
