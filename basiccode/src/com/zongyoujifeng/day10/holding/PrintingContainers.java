@@ -29,13 +29,22 @@ public class PrintingContainers {
     }
 
     public static void main(String[] args) {
+
+        // 底层是数组
         print(fill(new ArrayList<>()));
+
         print(fill(new LinkedList<>()));
+
         print(fill(new HashSet<>()));
+
         print(fill(new TreeSet<>()));
+
         print(fill(new LinkedHashSet<>()));
+
         print(fill(new HashMap<>()));
+
         print(fill(new TreeMap<>()));
+
         print(fill(new LinkedHashMap<>()));
     }
 }
