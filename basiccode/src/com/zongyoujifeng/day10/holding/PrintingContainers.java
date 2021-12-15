@@ -30,21 +30,23 @@ public class PrintingContainers {
 
     public static void main(String[] args) {
 
-        // 底层是数组
+        // 底层是数组 ArrayList和LinkedList都是按照插入顺序保存元素
         print(fill(new ArrayList<>()));
-
         print(fill(new LinkedList<>()));
 
+        // Set集合中元素不能重复
+        // HashSet是最快获取元素的方式
         print(fill(new HashSet<>()));
-
+        // TreeSet按照比较结果的升序保存元素
         print(fill(new TreeSet<>()));
-
+        // LinkedHashSet按照添加的顺序保存对象
         print(fill(new LinkedHashSet<>()));
 
+        // Map存储的键值对 键不能重复
         print(fill(new HashMap<>()));
-
+        // 按照比较结果的升序保存键
         print(fill(new TreeMap<>()));
-
+        // LinkedHashMap按照插入顺序保存键
         print(fill(new LinkedHashMap<>()));
     }
 }

@@ -21,7 +21,7 @@ public class MapDataTest {
     }
 }
 
-class Letters implements Generator<Pair<Integer, String>>,Iterable<Integer> {
+class Letters implements Generator<Pair<Integer, String>>, Iterable<Integer> {
     private int size = 9;
     private int number = 1;
     private char letter = 'A';
