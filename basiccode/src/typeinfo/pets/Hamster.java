@@ -2,8 +2,7 @@
 package typeinfo.pets;
 
 /**
- * 仓鼠
- *
+ * @description 仓鼠
  * @author Bruce Eckel
  */
 public class Hamster extends Rodent {

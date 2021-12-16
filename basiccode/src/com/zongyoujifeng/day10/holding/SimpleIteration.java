@@ -10,7 +10,8 @@ import java.util.List;
  * @author 10451
  * @version 1.0
  * @ClassName SimpleIteration
- * @description 迭代器
+ * @description 迭代器 是一个对象，它的工作是遍历并选择序列中的对象，而程序员不必关心该序列的底层结构
+ * 迭代器通常被称为轻量级对象，创建它的代价很小。
  * @date 2021/2/25 15:19
  */
 public class SimpleIteration {

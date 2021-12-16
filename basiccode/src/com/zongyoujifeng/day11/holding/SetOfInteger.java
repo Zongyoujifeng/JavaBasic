@@ -15,11 +15,11 @@ public class SetOfInteger {
     public static void main(String[] args) {
 
         Random rand = new Random(100);
-        Set<Integer> intset = new HashSet<>();
+        Set<Integer> intSet = new HashSet<>();
         for (int i = 0; i < 10000; i++) {
-            intset.add(rand.nextInt(100000000));
+            intSet.add(rand.nextInt(100000000));
         }
-        System.out.println(intset);
+        System.out.println(intSet);
 
         //哈希表初始长度16，负载因子时0.75
         Set<Integer> set = new HashSet<>();

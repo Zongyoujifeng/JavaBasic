@@ -14,10 +14,11 @@ import java.util.TreeSet;
 public class SortedSetOfInteger {
     public static void main(String[] args) {
         Random rand = new Random(47);
-        SortedSet<Integer> intset = new TreeSet<>();
+        SortedSet<Integer> intSet = new TreeSet<>();
+
         for (int i = 0; i < 10000; i++) {
-            intset.add(rand.nextInt(30));
+            intSet.add(rand.nextInt(30));
         }
-        System.out.println(intset);
+        System.out.println(intSet);
     }
 }

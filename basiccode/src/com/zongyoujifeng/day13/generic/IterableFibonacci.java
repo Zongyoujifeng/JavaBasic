@@ -20,7 +20,7 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
 
     @Override
     public Iterator<Integer> iterator() {
-        return new Iterator<>() {
+        return new Iterator<Integer>() {
             @Override
             public boolean hasNext() {
                 return count > 0;

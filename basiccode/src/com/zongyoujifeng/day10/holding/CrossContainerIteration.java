@@ -23,24 +23,12 @@ public class CrossContainerIteration {
 
     public static void main(String[] args) {
         ArrayList<Pet> pets = Pets.arrayList(8);
-        Iterator<Pet> it = pets.iterator();
-        while (it.hasNext()) {
-            System.out.print(it.next() + " ");
-        }
-
-        System.out.println();
-
-
-
         LinkedList<Pet> petsLL = new LinkedList<>(pets);
         HashSet<Pet> petsHS = new HashSet<>(pets);
         TreeSet<Pet> petsTS = new TreeSet<>(pets);
-
         display(pets.iterator());
         display(petsLL.iterator());
         display(petsHS.iterator());
         display(petsTS.iterator());
-
-
     }
 }
