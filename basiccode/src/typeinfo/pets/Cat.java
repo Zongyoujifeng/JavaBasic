@@ -3,7 +3,7 @@ package typeinfo.pets;
 
 /**
  * 猫
- *
+ * Cat类
  * @author Bruce Eckel
  */
 public class Cat extends Pet {

@@ -2,6 +2,7 @@
 // Creates random sequences of Pets.
 package typeinfo.pets;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,11 +23,22 @@ public abstract class PetCreator {
 
     public Pet randomPet() { // Create one random Pet
         int n = rand.nextInt(types().size());
+        // try {
+        //     return types().get(n).newInstance();
+        // } catch (InstantiationException e) {
+        //     throw new RuntimeException(e);
+        // } catch (IllegalAccessException e) {
+        //     throw new RuntimeException(e);
+        // }
         try {
-            return types().get(n).newInstance();
+            return types().get(n).getDeclaredConstructor().newInstance();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }

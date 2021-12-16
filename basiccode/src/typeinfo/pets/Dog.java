@@ -2,6 +2,7 @@
 package typeinfo.pets;
 
 /**
+ * Dog类
  * @author Bruce Eckel
  */
 public class Dog extends Pet {

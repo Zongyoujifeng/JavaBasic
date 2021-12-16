@@ -22,7 +22,7 @@ public class InterfaceVsIterator {
     }
 
     public static void display(Collection<Pet> pets) {
-        for (Pet p: pets) {
+        for (Pet p : pets) {
             System.out.print(p.id() + ": " + p + " ");
         }
         System.out.println();
