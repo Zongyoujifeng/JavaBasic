@@ -11,13 +11,17 @@ public class Tester<C> {
     }
 
     protected C container;
-    private String headline = "";
+
+    private String headline = ""; // 标题
+
     private List<Test<C>> tests;
 
+    // 输出格式
     private static String stringField() {
         return "%" + fieldWidth + "s";
     }
 
+    // 输出格式
     private static String numberField() {
         return "%" + fieldWidth + "d";
     }
@@ -33,8 +37,13 @@ public class Tester<C> {
             headline = container.getClass().getSimpleName();
     }
 
+    /**
+     * @param container 测试容器
+     * @param tests     测试list
+     * @param paramList 参数
+     */
     public Tester(C container, List<Test<C>> tests, TestParam[] paramList) {
-       this(container, tests);
+        this(container, tests);
         this.paramList = paramList;
     }
 
@@ -42,8 +51,12 @@ public class Tester<C> {
         this.headline = headline;
     }
 
-    public static <C> void run(C cntnr, List<Test<C>> tests){
+    public static <C> void run(C cntnr, List<Test<C>> tests) {
         new Tester<C>(cntnr, tests).timedTest();
+    }
+
+    public static <C> void run(C cntnr, List<Test<C>> tests, TestParam[] paramList) {
+        new Tester<C>(cntnr, tests, paramList).timedTest();
     }
 
     private void displayHeader() {
