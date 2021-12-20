@@ -18,45 +18,46 @@ public class ListFeatures {
     public static void main(String[] args) {
         Random rand = new Random(47);
         List<Pet> pets = Pets.arrayList(7);
-        print("1:" + pets);
+        print("1:随机生成7个Pet对象列表：" + pets);
 
         Hamster h = new Hamster();
-        pets.add(h);
-        print("2:" + pets);
 
-        print("3:" + pets.contains(h));
+        pets.add(h);
+        print("2:添加Hamster后列表为:" + pets);
+
+        print("3:列表List是否包含Hamster: " + pets.contains(h));
 
         pets.remove(h);
 
         Pet p = pets.get(2);
-        print("4:" + p + " " + pets.indexOf(p));
+        print("4:第二个参数" + p + "的下标是" + pets.indexOf(p));
 
         Pet cymric = new Cymric();
-        print("5:" + pets.indexOf(cymric));
-        print("6:" + pets.contains(cymric));
+        print("5:重新创建一个Cymric对象，传递给indexOf()方法" + pets.indexOf(cymric));
+        print("6:判断List中是否包含:" + pets.contains(cymric));
         //Must be the exact object
-        print("7:" + pets.remove(p));
-        print("8:" + pets);
+        print("7:删除指定元素" + pets.remove(p));
+        print("8:删除指定元素后列表为:" + pets);
         pets.add(3, new Mouse());
-        print("9:" + pets);
+        print("9:指定位置添加新创建的Mouse对象之后的List:" + pets);
 
         List<Pet> sub = pets.subList(1, 4);
-        print("subList" + sub);
-        print("10:" + pets.containsAll(sub));
+        print("subList: " + sub);
+        print("10:是否包含子列表" + pets.containsAll(sub));
         Collections.sort(sub);
         print("sorted subList: " + sub);
 
-        print("11:" + pets.containsAll(sub));
+        print("11:子表排序后List是否包含子表" + pets.containsAll(sub));
         Collections.shuffle(sub, rand);
         print("shuffled subList: " + sub);
-        print("12:" + pets.containsAll(sub));
+        print("12:随机打乱子表后List是否包含子表" + pets.containsAll(sub));
 
         List<Pet> copy = new ArrayList<>(pets);
         sub = Arrays.asList(pets.get(1), pets.get(4));
 
         print(sub);
         copy.retainAll(sub);
-        print("13: " + copy);
+        print("13: 求交集: " + copy);
         copy = new ArrayList<>(pets);
         copy.remove(2);
         print("14: " + copy);

@@ -31,7 +31,7 @@ public class InterfaceVsIterator {
     }
 
     public static void main(String[] args) {
-        List<Pet> petList = Pets.arrayList(8);
+        List<Pet> petList = Pets.arrayList(12);
         System.out.println(petList);
         Set<Pet> petSet = new HashSet<>(petList);
         System.out.println(petSet);
@@ -54,24 +54,24 @@ public class InterfaceVsIterator {
         // }
 
         // Set<Pet> newPetSet = new HashSet<>(newList);
-        // Map<String, Pet> petMap = new LinkedHashMap<>();
-        // String[] names = ("Ralph, Eric, Robin, Lacey, " +
-        //         "Britney, Sam, Spot, Fluffy").split(", ");
-        // for (int i = 0; i < names.length; i++) {
-        //     petMap.put(names[i], petList.get(i));
-        // }
+        Map<String, Pet> petMap = new LinkedHashMap<>();
+        String[] names = ("Ralph, Eric, Robin, Lacey, " +
+                "Britney, Sam, Spot, Fluffy").split(", ");
+        for (int i = 0; i < names.length; i++) {
+            petMap.put(names[i], petList.get(i));
+        }
         // for (Pet pet : newPetSet) {
         //     System.out.print(pet + " ");
         // }
         display(petList);
         display(petSet);
 
-        // display(petList.iterator());
-        // display(petSet.iterator());
+        display(petList.iterator());
+        display(petSet.iterator());
 
-        // System.out.println(petMap);
-        // System.out.println(petMap.keySet());
-        // display(petMap.values());
-        // display(petMap.values().iterator());
+        System.out.println(petMap);
+        System.out.println(petMap.keySet());
+        display(petMap.values());
+        display(petMap.values().iterator());
     }
 }
