@@ -18,8 +18,7 @@ public class Shapes {
             s[i] = gen.next();
         }
 
-        for (Shape shp : s
-        ) {
+        for (Shape shp : s) {
             shp.draw();
         }
     }

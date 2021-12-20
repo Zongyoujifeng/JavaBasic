@@ -2,8 +2,6 @@
 // Using class literals.
 package typeinfo.pets;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -13,10 +11,7 @@ public class LiteralPetCreator extends PetCreator {
     // No try block needed.
     @SuppressWarnings("unchecked")
     public static final List<Class<? extends Pet>> allTypes =
-            Collections.unmodifiableList(Arrays.asList(
-                    Pet.class, Dog.class, Cat.class, Rodent.class,
-                    Mutt.class, Pug.class, EgyptianMau.class, Manx.class,
-                    Cymric.class, Rat.class, Mouse.class, Hamster.class));
+            List.of(Pet.class, Dog.class, Cat.class, Rodent.class, Mutt.class, Pug.class, EgyptianMau.class, Manx.class, Cymric.class, Rat.class, Mouse.class, Hamster.class);
 
     /**
      * Types for random creation:

@@ -6,6 +6,9 @@ import net.mindview.util.Generated;
 
 import java.util.*;
 
+/**
+ * @author 10451
+ */
 public class ListPerformance {
     static Random rand = new Random();
     // 执行次数
@@ -139,8 +142,9 @@ public class ListPerformance {
                 for (int i = 0; i < loops; i++) {
                     list.clear();
                     list.addAll(new CountingIntegerList(size));
-                    while (list.size() > 0)
+                    while (list.size() > 0) {
                         list.removeFirst();
+                    }
                 }
                 return loops * size;
             }
@@ -154,8 +158,9 @@ public class ListPerformance {
                 for (int i = 0; i < loops; i++) {
                     list.clear();
                     list.addAll(new CountingIntegerList(size));
-                    while (list.size() > 0)
+                    while (list.size() > 0) {
                         list.removeLast();
+                    }
                 }
                 return loops * size;
             }

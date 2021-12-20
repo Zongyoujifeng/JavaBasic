@@ -15,11 +15,11 @@ public class RandomShapeGenerator {
     public Shape next() {
         switch (rand.nextInt(3)) {
             default:
-            case 1:
+            case 0:
                 return new Circle();
-            case 2:
+            case 1:
                 return new Square();
-            case 3:
+            case 2:
                 return new Triangle();
         }
     }
