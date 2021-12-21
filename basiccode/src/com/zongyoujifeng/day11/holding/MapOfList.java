@@ -31,7 +31,9 @@ public class MapOfList {
     }
 
     public static void main(String[] args) {
+        // ketSet()方法产生了由在petPeople中所有键组成的Set
         print("People: " + petPeople.keySet());
+        // petPeople中所有值组成的集合
         print("Pets" + petPeople.values());
         for (Person person : petPeople.keySet()) {
             print(person + " has:");
